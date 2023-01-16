@@ -1,0 +1,18 @@
+tasks:
+  - name: Deploy Jekyll Docs
+    init: |
+      cd docs/
+      bundle install
+      export JEKYLL_ENV=production
+    command: cd docs/; bundle exec jekyll s
+
+vscode:
+  extensions:
+    - eamodio.gitlens
+    - redhat.vscode-yaml
+    - editorconfig.editorconfig
+    - streetsidesoftware.code-spell-checker
+    - Antyos.openscad
+
+image:
+  file: .gitpod.Dockerfile
